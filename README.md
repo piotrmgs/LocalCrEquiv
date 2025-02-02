@@ -1,10 +1,10 @@
 # Local $C^r$-Equivalence of Loss Landscapes: Code Repository
 
-This repository contains the implementation of the experiments presented in the paper "Local C^r-Equivalence of Loss Landscapes: A Geometric Approach to Deep Learning Optimization." It includes data preprocessing, model training for both regression (MSE) and classification (Cross-Entropy) tasks, and code for verifying local C^r-equivalence.
+This repository contains the implementation of the experiments presented in the paper "Local $C^r$-Equivalence of Loss Landscapes: A Geometric Approach to Deep Learning Optimization." It includes data preprocessing, model training for both regression (MSE) and classification (Cross-Entropy) tasks, and code for verifying local $C^r$-equivalence.
 
 ---
 
-1. Dataset Preparation
+# 1. Dataset Preparation
 
 File: dataset_preprocessing.py
 
@@ -38,7 +38,7 @@ CIFAR-10: Train batches: 782 Test batches: 157
 
 ---
 
-2. California Housing Regression (MLP with MSE Loss)
+# 2. California Housing Regression (MLP with MSE Loss)
 
 File: train_california_mlp.py
 
@@ -72,7 +72,7 @@ Saved MLP model parameters to model_mlp_california.pt
 
 ---
 
-3. CIFAR-10 Classification (CNN with Cross-Entropy Loss)
+# 3. CIFAR-10 Classification (CNN with Cross-Entropy Loss)
 
 File: train_cifar_cnn.py
 
@@ -110,7 +110,7 @@ Saved CNN model parameters to model_cnn_cifar10.pt
 
 ---
 
-4. Output Files
+# 4. Output Files
 
 Script: train_california_mlp.py
 Generated File: model_mlp_california.pt
@@ -122,7 +122,7 @@ Description: Trained CNN model for CIFAR-10
 
 ---
 
-5. Verification of Local C^r-Equivalence (MSE Experiment)
+# 5. Verification of Local C^r-Equivalence (MSE Experiment)
 
 File: check_cr_equiv_param_space.py
 
@@ -152,9 +152,7 @@ Example output:
 
 ---
 
----
-
-6. Verification of Local C^r-Equivalence (Cross-Entropy Experiment)
+# 6. Verification of Local C^r-Equivalence (Cross-Entropy Experiment)
 
 File: cifar10_crossentropy_verification.py
 
@@ -183,9 +181,3 @@ Example output:
 - The results include information about execution time, GPU usage, and detailed statistical outputs for analysis.
 
 ---
-
-
-
-
-
-
