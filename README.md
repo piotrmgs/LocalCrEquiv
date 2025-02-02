@@ -6,7 +6,7 @@ This repository contains the implementation of the experiments presented in the 
 
 # 1. Dataset Preparation
 
-File: dataset_preprocessing.py
+File: `dataset_preprocessing.py`
 
 This script handles data loading and preprocessing for both experiments:
 - California Housing Dataset (Regression with MSE Loss)
@@ -30,7 +30,7 @@ Functions:
 Usage Example:
 
 Run the script:
-python dataset_preprocessing.py
+`python dataset_preprocessing.py`
 
 Sample output:
 California Housing: Train batches: 206 Test batches: 52
@@ -40,7 +40,7 @@ CIFAR-10: Train batches: 782 Test batches: 157
 
 # 2. California Housing Regression (MLP with MSE Loss)
 
-File: train_california_mlp.py
+File: `train_california_mlp.py`
 
 This script defines and trains a simple Multilayer Perceptron (MLP) for the California Housing dataset.
 
@@ -62,7 +62,7 @@ Note: Replace [...] in the script with the appropriate path where the model shou
 folder_path = "[...]"  # Replace with your desired directory path
 
 Run the Script:
-python train_california_mlp.py
+`python train_california_mlp.py`
 
 Sample output:
 Epoch [1/30] - Train Loss: 0.7234
@@ -74,7 +74,7 @@ Saved MLP model parameters to model_mlp_california.pt
 
 # 3. CIFAR-10 Classification (CNN with Cross-Entropy Loss)
 
-File: train_cifar_cnn.py
+File: `train_cifar_cnn.py`
 
 This script defines and trains a Convolutional Neural Network (CNN) on the CIFAR-10 dataset.
 
@@ -100,7 +100,7 @@ Note: Replace [...] in the script with the appropriate path where the model shou
 folder_path = "[...]"  # Replace with your desired directory path
 
 Run the Script:
-python train_cifar_cnn.py
+`python train_cifar_cnn.py`
 
 Sample output:
 Epoch [1/20] - Train Loss: 1.8621, Train Acc: 32.45%
@@ -112,27 +112,28 @@ Saved CNN model parameters to model_cnn_cifar10.pt
 
 # 4. Output Files
 
-Script: train_california_mlp.py
-Generated File: model_mlp_california.pt
+Script: `train_california_mlp.py`
+Generated File: `model_mlp_california.pt`
 Description: Trained MLP model for California Housing
 
-Script: train_cifar_cnn.py
-Generated File: model_cnn_cifar10.pt
+Script: `train_cifar_cnn.py`
+Generated File: `model_cnn_cifar10.pt`
 Description: Trained CNN model for CIFAR-10
 
 ---
 
-# 5. Verification of Local C^r-Equivalence (MSE Experiment)
+# 5. Verification of Local $C^r$-Equivalence (MSE Experiment)
 
-File: check_cr_equiv_param_space.py
+File: `check_cr_equiv_param_space.py`
 
-This script verifies the local C^r-equivalence condition for the MSE loss landscape using the trained MLP model on the California Housing dataset.
+This script verifies the local $C^r$-equivalence condition for the MSE loss landscape using the trained MLP model on the California Housing dataset.
 
 How to Run:
 1. Make sure the trained model file `model_mlp_california.pt` exists.
 2. Specify the correct paths:
    - Replace `[...]` in `model_path` with the path to `model_mlp_california.pt`.
    - Replace `[...]` in `output_path` with the directory where you want to save the results.
+3. Run the script: `python check_cr_equiv_param_space.py`.
 
 Example output:
 - A text file `ratios_results.txt` containing:
@@ -152,17 +153,18 @@ Example output:
 
 ---
 
-# 6. Verification of Local C^r-Equivalence (Cross-Entropy Experiment)
+# 6. Verification of Local $C^r$-Equivalence (Cross-Entropy Experiment)
 
-File: cifar10_crossentropy_verification.py
+File: `cifar10_crossentropy_verification.py`
 
-This script verifies the local C^r-equivalence condition for the Cross-Entropy loss landscape using the trained CNN model on the CIFAR-10 dataset.
+This script verifies the local $C^r$-equivalence condition for the Cross-Entropy loss landscape using the trained CNN model on the CIFAR-10 dataset.
 
 How to Run:
 1. Ensure the trained model file `model_cnn_cifar10.pt` exists.
 2. Specify the correct paths:
    - Replace `[...]` in `model_path` with the path to `model_cnn_cifar10.pt`.
    - Replace `[...]` in `output_path` with the directory where you want to save the results.
+3. Run the script: `cifar10_crossentropy_verification.py`.
 
 Example output:
 - A text file `ratios_results.txt` containing:
